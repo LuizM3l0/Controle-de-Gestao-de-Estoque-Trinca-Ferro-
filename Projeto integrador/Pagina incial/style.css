@@ -1,0 +1,122 @@
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #7bbd60; /* tom bege principal */
+      color: rgb(250, 250, 250);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    /* Ícone do menu (hambúrguer) */
+    .menu-icon {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      width: 30px;
+      height: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 10;
+    }
+
+    .menu-icon div {
+      width: 100%;
+      height: 4px;
+      background-color: white;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Menu lateral */
+    .side-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #7ccc5c;
+      color: white;
+      transition: left 0.3s ease;
+      padding-top: 60px;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+      z-index: 5;
+    }
+
+    .side-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .side-menu ul li {
+      padding: 15px 25px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .side-menu ul li:hover {
+  background-color: rgb(24, 146, 85);
+}
+
+
+    .side-menu.active {
+      left: 0;
+    }
+
+    /* Conteúdo principal */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      margin-bottom: 20px;
+      max-width: 90%;
+    }
+
+    /* Logótipo responsivo */
+    .logo img {
+      display: block;
+      width: 45vw;           /* ocupa 35% da largura do ecrã */
+      max-width: 350px;      /* nunca maior que 200px */
+      min-width: 125px;      /* nem menor que 100px */
+      height: auto;          /* mantém proporção */
+      margin: 0 auto 20px auto;
+      border-radius: 8px;
+    }
+
+    footer {
+      padding: 10px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-align: center;
+    }
+
+    /* Melhor visual em telas pequenas */
+    @media (max-width: 600px) {
+      .menu-icon {
+        top: 15px;
+        left: 15px;
+        width: 25px;
+        height: 20px;
+      }
+
+      .side-menu {
+        width: 200px;
+      }
+    }
+ 

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="port">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h2>Cadastro de Produto</h2>
+
+    <form>
+
+    <label for="nome-produto">Nome do Produto(obrigatório):</label>
+    <input type="text" id="nome-produto" name="nome-produto" placeholder="Insira o nome do Produto" required>
+
+<br><br>
+
+    <label for="codigo-barras">Código de Barras:</label>
+    <input type="text" id="codigo-barras" name="codigo-barras"
+           placeholder="Insira o código de barras" inputmode="numeric" pattern="[0-9]*">
+
+           <br><br>
+
+    <label for="descricao">Descrição (obrigatório):</label>
+    <textarea id="descricao" name="descricao" placeholder="Descreva brevemente o produto" required></textarea>
+
+           <br><br>
+
+    <label for="numero-quantidade">Quantidade de Estoque:</label>
+    <input type="text" id="numero-quantidade" name="numero-quantidade"
+           placeholder="Insira a quantidade disponivel" inputmode="numeric" pattern="[0-9]*">
+
+           <br><br>
+
+       <!-- Categoria (obrigatório) -->
+     <label for="categoria">Categoria (obrigatório):</label>
+     <select id="categoria" name="categoria" required>
+     <option value="">Selecione uma categoria</option>
+     <option value="bebidas">Bebidas</option>
+     <option value="mercearia">Mercearia</option>
+     <option value="outros">Outros</option>
+     </select>
+
+     <br><br>
+
+<!-- Campo adicional exibido apenas se "Outro" for selecionado -->
+     <input type="text" id="outra-categoria" name="outra-categoria" placeholder="Especifique a categoria" style="display:none;">
+
+     <br><br>
+
+<!-- Data de Validade (se aplicável) -->
+     <label for="validade">Data de Validade (se aplicável):</label>
+     <input type="date" id="validade" name="validade" placeholder="Selecione a data de validade">
+
+     <br><br>
+
+<!-- Imagem do Produto (se aplicável) -->
+     <label for="imagem-produto">Imagem do Produto (se aplicável):</label>
+     <input type="file" id="imagem-produto" name="imagem-produto" accept="image/*">
+
+       <br><br>
+       
+           <button type="submit">Cadastrar</button>
+
+    </form>
+
+  <!-- Importa o arquivo JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
